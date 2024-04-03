@@ -115,7 +115,9 @@ function MainSec({ active_form, form_active_func }) {
             }}
           >
             {tag.map((t) => (
-              <p className="font-medium">{t}</p>
+              <p className="font-medium" key={t}>
+                {t}
+              </p>
             ))}
             <GrPowerReset />
           </div>
@@ -180,7 +182,7 @@ function MainSec({ active_form, form_active_func }) {
               <AiOutlinePlus size={"1.3em"} />
             </div>
             {stickers.map((stk) => (
-              <div className="text-center w-fit emoji">
+              <div className="text-center w-fit emoji" key={stk.text}>
                 <h2>{stk.sticker}</h2>
                 <h2 className="text-xs">{stk.text}</h2>
               </div>

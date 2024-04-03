@@ -27,7 +27,7 @@ function LoginPage() {
   }
 
   return (
-    <main className={`w-full max-h-screen  bg-[#111827]`}>
+    <main className="w-full max-h-screen  bg-[#111827]">
       <Toaster />
       <section
         className={`lg:w-[33%] relative h-screen max-h-screen bg-black text-white mx-auto overflow-hidden`}
@@ -59,7 +59,7 @@ function LoginPage() {
               {loading ? "loging..." : "Login"}
             </button>
             <p className="my-4 text-center text-sm text-slate-400">
-              Don't have an account{" "}
+              Dont have an account{" "}
               <Link href="/signup" className="text-black">
                 Register
               </Link>
