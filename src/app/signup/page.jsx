@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-function page() {
+function SingupPage() {
   const [form_active, set_form_active] = useState(false);
   function active_form(v) {
     set_form_active(v);
@@ -90,4 +90,4 @@ function page() {
   );
 }
 
-export default page;
+export default SingupPage;

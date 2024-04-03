@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
-function page() {
+function ProfilePage() {
   const [user, setUser] = useState({});
   const [budget_amount, set_budget_amount] = useState();
   async function user_fet() {
@@ -84,4 +84,4 @@ function page() {
   );
 }
 
-export default page;
+export default ProfilePage;

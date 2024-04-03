@@ -7,8 +7,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 
-function page() {
-  const [theme, set_theme] = useState(true);
+function LoginPage() {
   const [email, set_email] = useState();
   const [password, set_password] = useState();
   const [loading, setLoading] = useState(false);
@@ -28,16 +27,10 @@ function page() {
   }
 
   return (
-    <main
-      className={`w-full max-h-screen  ${
-        theme ? "bg-[#111827]" : "bg-[#F9FAFB]"
-      }`}
-    >
+    <main className={`w-full max-h-screen  bg-[#111827]`}>
       <Toaster />
       <section
-        className={`lg:w-[33%] relative h-screen max-h-screen ${
-          theme ? "bg-black text-white" : "bg-white text-black"
-        } mx-auto overflow-hidden`}
+        className={`lg:w-[33%] relative h-screen max-h-screen bg-black text-white mx-auto overflow-hidden`}
       >
         <Header />
         <div
@@ -82,4 +75,4 @@ function page() {
   );
 }
 
-export default page;
+export default LoginPage;

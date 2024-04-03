@@ -4,7 +4,7 @@ import MainSec from "@/components/MainSec";
 import React, { useState } from "react";
 import HomeFooter from "@/components/HomeFooter";
 
-function page() {
+function Page() {
   const [active_form, set_active_form] = useState(false);
   function form_active_func(v) {
     set_active_form(v);
@@ -26,4 +26,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
