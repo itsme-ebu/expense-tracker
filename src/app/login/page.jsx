@@ -60,10 +60,7 @@ function LoginPage() {
             </button>
             <p className="my-4 text-center text-sm text-slate-400">
               Don't have an account{" "}
-              <Link
-                href="/signup"
-                className={`${theme ? "text-white" : "text-black"}`}
-              >
+              <Link href="/signup" className="text-black">
                 Register
               </Link>
             </p>

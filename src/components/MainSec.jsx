@@ -75,15 +75,15 @@ function MainSec({ active_form, form_active_func }) {
           <h2 className="text-4xl text-green-500">
             $
             <span className="text-5xl font-normal">
-              {user?.budget - this_mount?.total}
+              {user?.budget - this_mount?.total || ""}
             </span>
             .00
           </h2>
         </div>
         <div className="w-full h-full ">
           <div className="flex justify-between items-center text-slate-400 text-sm">
-            <h2> Month History</h2>
-            <h2> $ {this_mount?.total}</h2>
+            <h2 key="history"> Month History</h2>
+            <h2 key="total"> $ {this_mount?.total}</h2>
           </div>
           {this_mount?.expenses.map((exp, i) => (
             <Spend exp={exp} key={i} />
