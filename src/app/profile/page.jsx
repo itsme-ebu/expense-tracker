@@ -9,6 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 function ProfilePage() {
   const [user, setUser] = useState({});
   const [budget_amount, set_budget_amount] = useState();
+  const [model, setModel] = useState(false);
   async function user_fet() {
     const { data } = await axios.post("/api/me");
     const { user } = data;
@@ -52,21 +53,30 @@ function ProfilePage() {
             </div>
           </div>
           <div className="py-8 text-slate-400 text-sm">
-            <div className="p-4 border-y h-32 overflow-hidden border-slate-700 ">
-              <div className="flex justify-between items-center cursor-pointer">
+            <div
+              className={`p-4 border-y ${
+                model ? "h-32" : "h-14"
+              } transition-all overflow-hidden border-slate-700 `}
+            >
+              <div
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => {
+                  setModel(!model);
+                }}
+              >
                 <p>Set Monthly Budget</p>
                 <MdOutlineArrowForwardIos size={"1.2em"} />
               </div>
               <div className="flex items-center mt-5 h-12 gap-5">
                 <input
                   type="number"
-                  placeholder="budget"
+                  placeholder="Budget"
                   value={budget_amount}
                   onChange={(e) => set_budget_amount(e.target.value)}
-                  className="h-full bg-transparent outline-none border text-base border-slate-700 px-2 flex-1 text-white"
+                  className="h-full bg-transparent outline-none border text-base border-slate-700 px-2 text-white"
                 />
                 <button
-                  className="px-10 text-white outline-none text-lg bg-orange-700 h-full"
+                  className="px-6 text-white outline-none text-lg bg-orange-700 h-full"
                   onClick={update_budget}
                 >
                   {" "}
