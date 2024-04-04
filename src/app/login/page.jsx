@@ -15,13 +15,14 @@ function LoginPage() {
   const router = useRouter();
   async function handle_login(e) {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await axios.post("/api/user/login", { email, password });
       if (!res.data.error) {
         toast.success("login success");
-        setLoading(true);
         return router.push("/");
       }
+      setLoading(false);
       return toast.error("Invalid Crentials");
     } catch (error) {
       toast.error("Invalid Crentials");
