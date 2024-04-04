@@ -7,9 +7,7 @@ export async function POST(req) {
       sucess: true,
     });
 
-    response.cookies.set("token", "", {
-      httpOnly: true,
-    });
+    response.cookies.set("token", "");
     return response;
   } catch (error) {
     return NextResponse.json({ error: error });
