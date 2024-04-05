@@ -11,7 +11,7 @@ function HomeFooter({ form_active_func }) {
     >
       <div className=" text-sm w-fit flex items-center flex-col">
         <GrAnalytics size={"1.2em"} />
-        <p>Analytic</p>
+        <Link href="/analytic">Analytic</Link>
       </div>
 
       <div

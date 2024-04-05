@@ -55,11 +55,16 @@ function LoginPage() {
               className="w-full p-2 bg-transparent outline-none border-slate-500 border-b text-lg"
               onChange={(e) => set_password(e.target.value)}
             />
+
             <button
               type="submit"
               className="w-[60%] mt-6 text-white bg-orange-700 py-4 rounded-xl text-xl font-medium mx-auto block"
             >
-              {loading ? "loging..." : "Login"}
+              {loading ? (
+                <span className="loading loading-dots loading-xs"></span>
+              ) : (
+                "Login"
+              )}
             </button>
             <p className="my-4 text-center text-sm text-slate-400">
               Dont have an account{" "}

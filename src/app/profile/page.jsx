@@ -37,14 +37,11 @@ function ProfilePage() {
           className={` w-full max-h-[80vh] lg:max-h-[76vh] overflow-y-scroll scroll-smooth`}
         >
           <div className="w-full h-full px-5 ">
-            <div className="flex items-center gap-10">
-              <div className="mt-5 w-20 h-20 rounded-full overflow-hidden relative">
-                <Image
-                  src="/imgs/ebu.jpg"
-                  fill
-                  objectFit="cover"
-                  alt="expese tracker"
-                />
+            <div className="flex items-center gap-10 mt-5">
+              <div className="avatar">
+                <div className="w-24 rounded-full relative ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <Image src="/imgs/ebu.jpg" fill />
+                </div>
               </div>
               <div>
                 <h2 className="text-2xl font-semibold">{user?.name}</h2>
